@@ -96,8 +96,8 @@ describe('Object serialization and Deserialization Tests', () => {
   });
 
   it('RebuildObject() should update values of property defined in user provided object', () => {
-    let p = new Person;
-    const address = new Address;
+    let p = new Person();
+    const address = new Address();
     address.city = 'ACCRA';
     address.emails = ['azandrewdevelopper@example.com'];
     p = RebuildObject(p, {

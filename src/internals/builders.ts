@@ -46,9 +46,11 @@ export function rebuildJSObjectType<T extends Object>(
   if (typeof instance === 'undefined' || instance === null) {
     return instance;
   }
-  Object.entries(params as { [index: string]: any }).forEach(([property, value]) => {
-    JSObject.setProperty(instance, property, value);
-  });
+  Object.entries(params as { [index: string]: any }).forEach(
+    ([property, value]) => {
+      JSObject.setProperty(instance, property, value);
+    }
+  );
 
   return instance;
 }

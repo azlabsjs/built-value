@@ -18,7 +18,7 @@ export const buildJSObjectType = <T extends any>(
     return Object.create(
       blueprint.prototype,
       Object.fromEntries(
-        Object.entries(params).map(([property, value]) => [
+        Array.from(Object.entries(params)).map(([property, value]) => [
           property,
           { value, writable: true, enumerable: true, configurable: true },
         ])
@@ -29,7 +29,7 @@ export const buildJSObjectType = <T extends any>(
     blueprint,
     params,
     Object.fromEntries(
-      Object.values(attributes).map(
+      Array.from(Object.values(attributes)).map(
         (value: string | { name: string; type: new () => any }) => {
           const prop = typeof value !== 'string' ? value.name : value;
           return [prop, value];

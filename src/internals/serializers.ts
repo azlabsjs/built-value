@@ -2,7 +2,7 @@ import { JSObject } from '@iazlabs/js-object';
 import { isDefined, isPrimitive } from '@iazlabs/utilities';
 import { getSerializableAttribute } from './helpers';
 
-const computeDiff = <T extends any>(a: T[], b: T[]) =>
+export const computeDiff = <T extends any>(a: T[], b: T[]) =>
   Array.from(
     new Set([
       ...a.filter(x => !b.includes(x)),
@@ -91,7 +91,7 @@ export const serializeJsObject = <T extends Object>(
   param: T,
   attributes?: { [index: string]: any }
 ) => {
-  const propertiesSet: [string, any][] = [];
+  const propertiesSet: any[][] = [];
   if (!isDefined(param)) {
     return undefined;
   }

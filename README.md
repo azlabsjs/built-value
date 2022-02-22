@@ -36,7 +36,7 @@ SerializeObject(p)
 DeserializeObject(p)
 ```
 
-- BuildObject() should set user values of property defined in user provided object
+* BuildObject() should set user values of property defined in user provided object
 
 ```ts
  const p = BuildObject(Person, {
@@ -48,7 +48,7 @@ DeserializeObject(p)
       },
 ```
 
-- RebuildObject() should update values of property defined in user provided object
+* RebuildObject() should update values of property defined in user provided object
 
 ```ts
  let p = new Person();

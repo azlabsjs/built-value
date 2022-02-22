@@ -23,7 +23,7 @@ It is the reverse operation of serialization.
 ```
 
 * Serializing our object 
-      * To serialize an instance, just invoke the SerializeObject() method : 
+  * To serialize an instance, just invoke the SerializeObject() method : 
 
 ```ts
 SerializeObject(p)

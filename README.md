@@ -22,15 +22,15 @@ It is the reverse operation of serialization.
     p.address.emails = ['contact@example.com'];
 ```
 
-- Serializing our object 
-      - To serialize an instance, just invoke the SerializeObject() method : 
+* Serializing our object 
+  * To serialize an instance, just invoke the SerializeObject() method : 
 
 ```ts
 SerializeObject(p)
 ```
 
-- Deserializing our object
-      - To deserialize an instance, just invoke the DeserializeObject() method :
+* Deserializing our object
+  * To deserialize an instance, just invoke the DeserializeObject() method :
 
 ```ts
 DeserializeObject(p)

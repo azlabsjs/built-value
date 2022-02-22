@@ -21,3 +21,43 @@ It is the reverse operation of serialization.
     p.address.city = 'LOME';
     p.address.emails = ['contact@example.com'];
 ```
+
+- Serializing our object 
+      - To serialize an instance, just invoke the SerializeObject() method : 
+
+```ts
+SerializeObject(p)
+```
+
+- Deserializing our object
+      - To deserialize an instance, just invoke the DeserializeObject() method :
+
+```ts
+DeserializeObject(p)
+```
+
+- BuildObject() should set user values of property defined in user provided object
+
+```ts
+ const p = BuildObject(Person, {
+      name: 'Azandrew',
+      lastname: 'Sidoine',
+      address: {
+        city: 'LOME',
+        emails: ['contact@example.com'],
+      },
+```
+
+- RebuildObject() should update values of property defined in user provided object
+
+```ts
+ let p = new Person();
+    const address = new Address();
+    address.city = 'ACCRA';
+    address.emails = ['azandrewdevelopper@example.com'];
+    p = RebuildObject(p, {
+      name: 'Azandrew',
+      lastname: 'Sidoine',
+      address: address,
+    });
+```

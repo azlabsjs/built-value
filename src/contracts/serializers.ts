@@ -3,7 +3,9 @@ export interface SerializerInterface {
    * @description Convert an object into a JSON formatted object
    * @param value T Instance to be serialize
    */
-  serialize<T>(value: T): { [index: string]: any } | undefined;
+  serialize<T extends object = any>(
+    value: T
+  ): { [index: string]: any } | undefined;
 
   /**
    * @description Convert a JSON encoded object into a provided class type

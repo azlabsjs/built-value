@@ -2,7 +2,7 @@ import { JSObject } from '@iazlabs/js-object';
 import { isDefined, isPrimitive } from '@iazlabs/utilities';
 import { getSerializableAttribute } from './helpers';
 
-export const computeDiff = <T extends any>(a: T[], b: T[]) =>
+export const computeDiff = <T>(a: T[], b: T[]) =>
   Array.from(
     new Set([
       ...a.filter(x => !b.includes(x)),
@@ -10,7 +10,7 @@ export const computeDiff = <T extends any>(a: T[], b: T[]) =>
     ])
   );
 
-export const deserializeJsObject = <T extends any>(
+export const deserializeJsObject = <T>(
   blueprint: new (...params: any[]) => T,
   value: { [index: string]: any },
   attributes?: { [index: string]: any }
@@ -87,7 +87,7 @@ export const deserializeJsObject = <T extends any>(
  * parameter and return there serialized values matching properties
  * of the mappings
  */
-export const serializeJsObject = <T extends Object>(
+export const serializeJsObject = <T extends object>(
   param: T,
   attributes?: { [index: string]: any }
 ) => {

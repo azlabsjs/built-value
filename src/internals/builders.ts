@@ -7,7 +7,7 @@ import { deserializeJsObject } from './serializers';
  * @param blueprint [[new () => T]]
  * @param params [[object]]
  */
-export const buildJSObjectType = <T extends any>(
+export const buildJSObjectType = <T>(
   blueprint: new () => T,
   params: { [index: string]: any }
 ) => {
@@ -39,7 +39,7 @@ export const buildJSObjectType = <T extends any>(
   );
 };
 
-export function rebuildJSObjectType<T extends Object>(
+export function rebuildJSObjectType<T extends object>(
   instance: T,
   params: Partial<T>
 ): T {

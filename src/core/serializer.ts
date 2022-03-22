@@ -16,10 +16,10 @@ class DefaultSerializer implements SerializerInterface {
   /**
    * @inheritdoc
    */
-  serialize = <T>(value: T) => serializeJsObject(value);
+  serialize = <T extends object = any>(value: T) => serializeJsObject(value);
 }
 
-export class ObjectSerializer<T extends Object>
+export class ObjectSerializer<T extends object = any>
   implements SerializableBuilderInterface<T>, BuilderInterface<T> {
   // Private properties
   private _serializer: SerializerInterface;

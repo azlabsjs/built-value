@@ -1,15 +1,15 @@
 # Documentation
 
-## Serializing object
+- Serialization
 
 Serialization means to convert your data structure into a suitable form for transmission.
 
-## Deserializing object
+- Deserialization
 
 Conversely, deserialization means to convert the received data into the data structure we want to use in our application.
 It is the reverse operation of serialization.
 
-### Example usage
+## Usage
 
 - Create an instance of Person from a javaScript object
 

@@ -1,4 +1,4 @@
-import { JSObject } from '@iazlabs/js-object';
+import { JSObject } from '@azlabsjs/js-object';
 
 export const getSerializableAttribute = <T>(blueprint: new () => T) => {
   let attributes: any = undefined;

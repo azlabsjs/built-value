@@ -1,4 +1,4 @@
-import { JSObject } from '@iazlabs/js-object';
+import { JSObject } from '@azlabsjs/js-object';
 import { getSerializableAttribute } from './helpers';
 import { deserializeJsObject } from './serializers';
 

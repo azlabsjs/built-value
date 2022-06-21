@@ -1,5 +1,5 @@
-import { JSObject } from '@iazlabs/js-object';
-import { isDefined, isPrimitive } from '@iazlabs/utilities';
+import { JSObject } from '@azlabsjs/js-object';
+import { isDefined, isPrimitive } from '@azlabsjs/utilities';
 import { getSerializableAttribute } from './helpers';
 
 export const computeDiff = <T>(a: T[], b: T[]) =>

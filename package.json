@@ -17,8 +17,7 @@
     "prepare": "git config core.hookspath .githooks && ts-build build",
     "size": "size-limit",
     "analyze": "size-limit --why",
-    "test": "jest",
-    "betterer": "betterer --strict"
+    "test": "jest"
   },
   "husky": {
     "hooks": {
@@ -51,8 +50,6 @@
   ],
   "devDependencies": {
     "@azlabsjs/ts-build": "^0.1.16",
-    "@betterer/cli": "^5.1.6",
-    "@betterer/typescript": "^5.1.6",
     "@size-limit/preset-small-lib": "^7.0.8",
     "@types/jest": "^27.4.1",
     "@typescript-eslint/eslint-plugin": "^5.12.1",
@@ -70,7 +67,7 @@
     "registry": "https://npm.pkg.github.com/@azlabsjs"
   },
   "peerDependencies": {
-    "@azlabsjs/functional": "^0.1.8"
+    "@azlabsjs/functional": "^0.2.0"
   },
   "dependencies": {
     "@azlabsjs/js-object": "^0.1.10",
